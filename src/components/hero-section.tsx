@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 import { HeroHeader } from './Header'
 import { InfiniteSlider } from '@/components/ui/infinite-slider'
 import { ProgressiveBlur } from '@/components/ui/progressive-blur'
-import { Users, TrendingUp, Clock, CircleCheck, ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 
 export default function HeroSection() {
     const videoForwardRef = useRef<HTMLVideoElement>(null)
@@ -87,7 +87,7 @@ export default function HeroSection() {
                                 {/* Left Column - Main Content (75%) */}
                                 <div className="lg:col-span-9 text-center lg:text-left">
                                     <h1 className="mt-8 text-balance text-5xl font-light text-white md:text-6xl lg:mt-16 xl:text-7xl">La Banque d'Affaires Nouvelle Génération pour les PME</h1>
-                                    <p className="mt-8 text-pretty text-lg text-gray-100 max-w-2xl">Vendez votre entreprise plus sereinement et rapidement</p>
+                                    <p className="mt-8 text-pretty text-lg text-gray-100 max-w-2xl">Nous vous trouvons le bon acquéreur sans sacrifier votre valorisation ni perdre des mois en négociations</p>
 
                                     <div className="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row lg:justify-start">
                                         <Button
@@ -113,45 +113,29 @@ export default function HeroSection() {
 
                                 {/* Right Column - Stats (25%) */}
                                 <div className="lg:col-span-3 relative">
-                                    <div className="mt-8 lg:mt-16 border-l border-white/10 pl-8 space-y-8">
-                                        <div className="flex items-start space-x-4 group">
-                                            <div className="p-2 bg-white/5 rounded-sm group-hover:bg-white/10 transition-colors">
-                                                <Users className="h-4 w-4 text-white/70" />
-                                            </div>
-                                            <div>
-                                                <div className="text-white font-semibold text-base">1000+ acheteurs</div>
-                                                <p className="text-white/70 text-sm mt-0.5">Réseau IA qualifié</p>
-                                            </div>
+                                    <div className="mt-8 lg:mt-16 pl-8 space-y-6">
+                                        <div className="group cursor-default transition-all duration-300 hover:translate-x-1">
+                                            <div className="text-white text-2xl font-light">1000+</div>
+                                            <div className="text-white/90 font-medium text-sm mt-1">acheteurs qualifiés</div>
+                                            <div className="text-white/60 text-xs mt-0.5">Réseau IA optimisé</div>
                                         </div>
                                         
-                                        <div className="flex items-start space-x-4 group">
-                                            <div className="p-2 bg-white/5 rounded-sm group-hover:bg-white/10 transition-colors">
-                                                <TrendingUp className="h-4 w-4 text-white/70" />
-                                            </div>
-                                            <div>
-                                                <div className="text-white font-semibold text-base">+30% de valeur</div>
-                                                <p className="text-white/70 text-sm mt-0.5">Enchères compétitives</p>
-                                            </div>
+                                        <div className="group cursor-default transition-all duration-300 hover:translate-x-1">
+                                            <div className="text-white text-2xl font-light">+30%</div>
+                                            <div className="text-white/90 font-medium text-sm mt-1">de valeur ajoutée</div>
+                                            <div className="text-white/60 text-xs mt-0.5">Enchères compétitives</div>
                                         </div>
                                         
-                                        <div className="flex items-start space-x-4 group">
-                                            <div className="p-2 bg-white/5 rounded-sm group-hover:bg-white/10 transition-colors">
-                                                <Clock className="h-4 w-4 text-white/70" />
-                                            </div>
-                                            <div>
-                                                <div className="text-white font-semibold text-base">45 jours max</div>
-                                                <p className="text-white/70 text-sm mt-0.5">Premières offres rapides</p>
-                                            </div>
+                                        <div className="group cursor-default transition-all duration-300 hover:translate-x-1">
+                                            <div className="text-white text-2xl font-light">45 jours</div>
+                                            <div className="text-white/90 font-medium text-sm mt-1">pour les premières offres</div>
+                                            <div className="text-white/60 text-xs mt-0.5">Process accéléré</div>
                                         </div>
                                         
-                                        <div className="flex items-start space-x-4 group">
-                                            <div className="p-2 bg-white/5 rounded-sm group-hover:bg-white/10 transition-colors">
-                                                <CircleCheck className="h-4 w-4 text-white/70" />
-                                            </div>
-                                            <div>
-                                                <div className="text-white font-semibold text-base">0€ d'avance</div>
-                                                <p className="text-white/70 text-sm mt-0.5">Success fee seulement</p>
-                                            </div>
+                                        <div className="group cursor-default transition-all duration-300 hover:translate-x-1">
+                                            <div className="text-white text-2xl font-light">0€</div>
+                                            <div className="text-white/90 font-medium text-sm mt-1">d'avance</div>
+                                            <div className="text-white/60 text-xs mt-0.5">Success fee uniquement</div>
                                         </div>
                                     </div>
                                 </div>

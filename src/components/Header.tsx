@@ -28,15 +28,18 @@ export const HeroHeader = () => {
         <header>
             <nav
                 data-state={menuState && 'active'}
-                className="fixed top-0 z-50 w-full px-2 pt-2">
-                <div className={cn('mx-auto max-w-6xl px-6 transition-all duration-300 lg:px-12', isScrolled && 'bg-white/10 dark:bg-black/20 max-w-5xl rounded-2xl border border-white/20 backdrop-blur-lg lg:px-8')}>
-                    <div className={cn("relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4", isScrolled && "py-2 lg:py-3")}>
+                className={cn(
+                    "fixed top-0 z-50 w-full transition-all duration-300",
+                    isScrolled && "bg-white/10 dark:bg-black/20 backdrop-blur-lg border-b border-white/20"
+                )}>
+                <div className="mx-auto max-w-6xl px-6 lg:px-12">
+                    <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
                         <div className="flex w-full justify-between lg:w-auto">
                             <Link
                                 href="/"
                                 aria-label="home"
                                 className="flex items-center space-x-2">
-                                <Logo className={isScrolled ? "text-lg" : ""} />
+                                <Logo />
                             </Link>
 
                             <button
@@ -49,7 +52,7 @@ export const HeroHeader = () => {
                         </div>
 
                         <div className="absolute inset-0 m-auto hidden size-fit lg:block">
-                            <ul className={cn("flex gap-8 text-sm", isScrolled && "gap-6")}>
+                            <ul className="flex gap-8 text-sm">
                                 {menuItems.map((item, index) => (
                                     <li key={index}>
                                         <Link
@@ -81,20 +84,20 @@ export const HeroHeader = () => {
                                     asChild
                                     variant="ghost"
                                     size="sm"
-                                    className="bg-transparent hover:bg-white/5 text-white border border-white/20 hover:border-white/30 transition-all duration-200 ease-in-out px-4 py-2 h-auto">
+                                    className="group border border-white/70 bg-transparent text-white hover:text-white hover:border-white hover:bg-white/5 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-white/10 rounded-sm px-4 py-2 h-auto text-sm font-medium transition-all duration-300">
                                     <Link href="#" className="flex items-center gap-2">
                                         <span>Connexion</span>
-                                        <ArrowUpRight className="h-3 w-3" />
+                                        <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                                     </Link>
                                 </Button>
                                 <Button
                                     asChild
                                     variant="ghost"
                                     size="sm"
-                                    className="bg-transparent hover:bg-white/5 text-white border border-white/20 hover:border-white/30 transition-all duration-200 ease-in-out px-4 py-2 h-auto">
+                                    className="group border border-white/70 bg-transparent text-white hover:text-white hover:border-white hover:bg-white/5 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-white/10 rounded-sm px-4 py-2 h-auto text-sm font-medium transition-all duration-300">
                                     <Link href="#" className="flex items-center gap-2">
                                         <span>Nous Contacter</span>
-                                        <ArrowUpRight className="h-3 w-3" />
+                                        <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                                     </Link>
                                 </Button>
                             </div>
