@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 import { HeroHeader } from './Header'
 import { InfiniteSlider } from '@/components/ui/infinite-slider'
 import { ProgressiveBlur } from '@/components/ui/progressive-blur'
-import { Users, TrendingUp, Clock, CircleCheck } from 'lucide-react'
+import { Users, TrendingUp, Clock, CircleCheck, ArrowUpRight } from 'lucide-react'
 
 export default function HeroSection() {
     const videoForwardRef = useRef<HTMLVideoElement>(null)
@@ -54,7 +54,7 @@ export default function HeroSection() {
         <>
             <HeroHeader />
             <main className="overflow-x-hidden">
-                <section className="relative">
+                <section className="relative min-h-screen">
                     {/* Video Background */}
                     <div className="absolute inset-0 w-full h-full overflow-hidden">
                         <video
@@ -81,31 +81,31 @@ export default function HeroSection() {
                     </div>
                     
                     {/* Content */}
-                    <div className="relative z-10 pb-40 pt-12 md:pb-48 lg:pb-64 lg:pt-44">
+                    <div className="relative z-10 min-h-screen flex items-start py-12 lg:pt-48 lg:pb-20">
                         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                            <div className="grid grid-cols-1 gap-x-20 gap-y-8 lg:grid-cols-12 lg:items-center">
+                            <div className="grid grid-cols-1 gap-x-20 gap-y-8 lg:grid-cols-12 lg:items-start">
                                 {/* Left Column - Main Content (75%) */}
                                 <div className="lg:col-span-9 text-center lg:text-left">
-                                    <h1 className="mt-8 text-balance text-5xl font-light text-white md:text-6xl lg:mt-16 xl:text-7xl">La Banque d'Affaires Nouvelle Génération pour PME</h1>
-                                    <p className="mt-8 text-pretty text-lg text-gray-100 max-w-2xl">Accélérez vos transactions M&A grâce à l'IA et notre réseau de 1000+ acheteurs qualifiés</p>
+                                    <h1 className="mt-8 text-balance text-5xl font-light text-white md:text-6xl lg:mt-16 xl:text-7xl">La Banque d'Affaires Nouvelle Génération pour les PME</h1>
+                                    <p className="mt-8 text-pretty text-lg text-gray-100 max-w-2xl">Vendez votre entreprise plus sereinement et rapidement</p>
 
-                                    <div className="mt-12 flex flex-col items-center justify-center gap-2 sm:flex-row lg:justify-start">
+                                    <div className="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row lg:justify-start">
                                         <Button
                                             asChild
-                                            size="lg"
-                                            className="px-5 text-base">
-                                            <Link href="#link">
-                                                <span className="text-nowrap">Vendre mon entreprise</span>
+                                            variant="default"
+                                            className="group bg-white text-black hover:bg-gray-50 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-white/10 rounded-sm px-6 py-3 h-auto text-base font-medium transition-all duration-300">
+                                            <Link href="#link" className="flex items-center gap-2">
+                                                <span>Vendre mon entreprise</span>
+                                                <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                                             </Link>
                                         </Button>
                                         <Button
-                                            key={2}
                                             asChild
-                                            size="lg"
-                                            variant="ghost"
-                                            className="px-5 text-base bg-white/10 text-white hover:bg-white/20">
-                                            <Link href="#link">
-                                                <span className="text-nowrap">Rejoindre le réseau d'acheteurs</span>
+                                            variant="outline"
+                                            className="group border border-white/70 bg-transparent text-white hover:text-white hover:border-white hover:bg-white/5 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-white/10 rounded-sm px-6 py-3 h-auto text-base font-medium transition-all duration-300">
+                                            <Link href="#link" className="flex items-center gap-2">
+                                                <span>Rejoindre le réseau d'acheteurs</span>
+                                                <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                                             </Link>
                                         </Button>
                                     </div>
@@ -113,7 +113,7 @@ export default function HeroSection() {
 
                                 {/* Right Column - Stats (25%) */}
                                 <div className="lg:col-span-3 relative">
-                                    <div className="border-l border-white/10 pl-8 space-y-8">
+                                    <div className="mt-8 lg:mt-16 border-l border-white/10 pl-8 space-y-8">
                                         <div className="flex items-start space-x-4 group">
                                             <div className="p-2 bg-white/5 rounded-sm group-hover:bg-white/10 transition-colors">
                                                 <Users className="h-4 w-4 text-white/70" />
