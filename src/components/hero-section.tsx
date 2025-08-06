@@ -81,30 +81,68 @@ export default function HeroSection() {
                     
                     {/* Content */}
                     <div className="relative z-10 pb-40 pt-12 md:pb-48 lg:pb-64 lg:pt-44">
-                        <div className="mx-auto flex max-w-6xl flex-col px-6">
-                            <div className="mx-auto max-w-3xl text-center lg:ml-0 lg:w-3/4 lg:text-left">
-                                <h1 className="mt-8 max-w-2xl text-balance text-5xl font-light text-white md:text-6xl lg:mt-16 xl:text-7xl">La Banque d'Affaires Nouvelle Génération pour PME</h1>
-                                <p className="mt-8 max-w-2xl text-pretty text-lg text-gray-100">Accélérez vos transactions M&A grâce à l'IA et notre réseau de 1000+ acheteurs qualifiés</p>
+                        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                            <div className="grid grid-cols-1 gap-x-12 gap-y-8 lg:grid-cols-12 lg:items-center">
+                                {/* Left Column - Main Content (75%) */}
+                                <div className="lg:col-span-9 text-center lg:text-left">
+                                    <h1 className="mt-8 text-balance text-5xl font-light text-white md:text-6xl lg:mt-16 xl:text-7xl">La Banque d'Affaires Nouvelle Génération pour PME</h1>
+                                    <p className="mt-8 text-pretty text-lg text-gray-100 max-w-2xl">Accélérez vos transactions M&A grâce à l'IA et notre réseau de 1000+ acheteurs qualifiés</p>
 
-                                <div className="mt-12 flex flex-col items-center justify-center gap-2 sm:flex-row lg:justify-start">
-                                    <Button
-                                        asChild
-                                        size="lg"
-                                        className="px-5 text-base">
-                                        <Link href="#link">
-                                            <span className="text-nowrap">Vendre mon entreprise</span>
-                                        </Link>
-                                    </Button>
-                                    <Button
-                                        key={2}
-                                        asChild
-                                        size="lg"
-                                        variant="ghost"
-                                        className="px-5 text-base bg-white/10 text-white hover:bg-white/20">
-                                        <Link href="#link">
-                                            <span className="text-nowrap">Rejoindre le réseau d'acheteurs</span>
-                                        </Link>
-                                    </Button>
+                                    <div className="mt-12 flex flex-col items-center justify-center gap-2 sm:flex-row lg:justify-start">
+                                        <Button
+                                            asChild
+                                            size="lg"
+                                            className="px-5 text-base">
+                                            <Link href="#link">
+                                                <span className="text-nowrap">Vendre mon entreprise</span>
+                                            </Link>
+                                        </Button>
+                                        <Button
+                                            key={2}
+                                            asChild
+                                            size="lg"
+                                            variant="ghost"
+                                            className="px-5 text-base bg-white/10 text-white hover:bg-white/20">
+                                            <Link href="#link">
+                                                <span className="text-nowrap">Rejoindre le réseau d'acheteurs</span>
+                                            </Link>
+                                        </Button>
+                                    </div>
+                                </div>
+
+                                {/* Right Column - Stats (25%) */}
+                                <div className="lg:col-span-3 space-y-6">
+                                    <div className="flex items-start space-x-3">
+                                        <span className="text-white/60 text-sm">→</span>
+                                        <div>
+                                            <span className="text-white font-medium text-sm">1000+ acheteurs</span>
+                                            <p className="text-white/60 text-xs mt-1">Réseau qualifié par l'IA</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="flex items-start space-x-3">
+                                        <span className="text-white/60 text-sm">→</span>
+                                        <div>
+                                            <span className="text-white font-medium text-sm">30% plus élevé</span>
+                                            <p className="text-white/60 text-xs mt-1">Offres compétitives</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="flex items-start space-x-3">
+                                        <span className="text-white/60 text-sm">→</span>
+                                        <div>
+                                            <span className="text-white font-medium text-sm">45 jours</span>
+                                            <p className="text-white/60 text-xs mt-1">Premières offres</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="flex items-start space-x-3">
+                                        <span className="text-white/60 text-sm">→</span>
+                                        <div>
+                                            <span className="text-white font-medium text-sm">Sans frais initiaux</span>
+                                            <p className="text-white/60 text-xs mt-1">Success fee uniquement</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
