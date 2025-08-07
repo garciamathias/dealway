@@ -77,7 +77,7 @@ export default function Footer() {
                 Politique de Confidentialité
               </Link>
               <Link href="#" className="text-sm hover:text-white transition-colors">
-                Conditions d'Utilisation
+                Conditions d&apos;Utilisation
               </Link>
               <Link href="#" className="text-sm hover:text-white transition-colors">
                 Politique de Cookies

@@ -3,29 +3,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowUpRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { TextEffect } from '@/components/ui/text-effect'
-import { AnimatedGroup } from '@/components/ui/animated-group'
 import { HeroHeader } from './header'
 
-const transitionVariants = {
-    item: {
-        hidden: {
-            opacity: 0,
-            filter: 'blur(12px)',
-            y: 12,
-        },
-        visible: {
-            opacity: 1,
-            filter: 'blur(0px)',
-            y: 0,
-            transition: {
-                type: 'spring' as const,
-                bounce: 0.3,
-                duration: 1.5,
-            },
-        },
-    },
-}
 
 export default function HeroSection() {
     return (
@@ -64,36 +43,14 @@ export default function HeroSection() {
                 <section className="relative z-20 w-full max-w-7xl px-6">
                     <div className="text-center">
 
-                                <TextEffect
-                                    preset="fade-in-blur"
-                                    speedSegment={0.3}
-                                    as="h1"
-                                    className="mt-8 text-balance text-6xl font-extralight md:text-7xl lg:mt-16 xl:text-[5.25rem]">
+                                <h1 className="mt-8 text-balance text-6xl font-extralight md:text-7xl lg:mt-16 xl:text-[5.25rem]">
                                     AI Research and Products Made by Students
-                                </TextEffect>
-                                <TextEffect
-                                    per="line"
-                                    preset="fade-in-blur"
-                                    speedSegment={0.3}
-                                    delay={0.5}
-                                    as="p"
-                                    className="mx-auto mt-8 max-w-2xl text-balance text-lg font-light">
+                                </h1>
+                                <p className="mx-auto mt-8 max-w-2xl text-balance text-lg font-light">
                                     Our mission is to build and democratize artificial intelligence for companies.
-                                </TextEffect>
+                                </p>
 
-                                <AnimatedGroup
-                                    variants={{
-                                        container: {
-                                            visible: {
-                                                transition: {
-                                                    staggerChildren: 0.05,
-                                                    delayChildren: 0.75,
-                                                },
-                                            },
-                                        },
-                                        ...transitionVariants,
-                                    }}
-                                    className="mt-12 flex flex-col items-center justify-center gap-4 md:flex-row">
+                                <div className="mt-12 flex flex-col items-center justify-center gap-4 md:flex-row">
                                     <Button
                                         asChild
                                         variant="ghost"
@@ -114,7 +71,7 @@ export default function HeroSection() {
                                             <ArrowUpRight className="size-5" />
                                         </Link>
                                     </Button>
-                                </AnimatedGroup>
+                                </div>
                     </div>
                 </section>
             </main>

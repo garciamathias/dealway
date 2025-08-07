@@ -1,17 +1,15 @@
 'use client'
 
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { HeroHeader } from './Header'
 import { InfiniteSlider } from '@/components/ui/infinite-slider'
-import { ProgressiveBlur } from '@/components/ui/progressive-blur'
 import { ArrowUpRight } from 'lucide-react'
 
 export default function HeroSection() {
     const videoForwardRef = useRef<HTMLVideoElement>(null)
     const videoReverseRef = useRef<HTMLVideoElement>(null)
-    const [isReversed, setIsReversed] = useState(false)
 
     useEffect(() => {
         const videoForward = videoForwardRef.current
@@ -23,7 +21,6 @@ export default function HeroSection() {
         videoReverse.load()
 
         const handleForwardEnded = () => {
-            setIsReversed(true)
             videoForward.style.display = 'none'
             videoReverse.style.display = 'block'
             videoReverse.currentTime = 0
@@ -31,7 +28,6 @@ export default function HeroSection() {
         }
 
         const handleReverseEnded = () => {
-            setIsReversed(false)
             videoReverse.style.display = 'none'
             videoForward.style.display = 'block'
             videoForward.currentTime = 0
@@ -86,7 +82,7 @@ export default function HeroSection() {
                             <div className="grid grid-cols-1 gap-x-20 gap-y-8 lg:grid-cols-12 lg:items-start">
                                 {/* Left Column - Main Content (75%) */}
                                 <div className="lg:col-span-9 text-center lg:text-left">
-                                    <h1 className="mt-8 text-balance text-5xl font-light text-white md:text-6xl lg:mt-16 xl:text-7xl">La Banque d'Affaires Nouvelle Génération pour les PME</h1>
+                                    <h1 className="mt-8 text-balance text-5xl font-light text-white md:text-6xl lg:mt-16 xl:text-7xl">La Banque d&apos;Affaires Nouvelle Génération pour les PME</h1>
                                     <p className="mt-8 text-pretty text-lg text-gray-100 max-w-2xl">Nous vous trouvons le bon acquéreur sans sacrifier votre valorisation ni perdre des mois en négociations</p>
 
                                     <div className="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row lg:justify-start">
@@ -104,7 +100,7 @@ export default function HeroSection() {
                                             variant="outline"
                                             className="group border border-white/70 bg-transparent text-white hover:text-white hover:border-white hover:bg-white/5 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-white/10 rounded-sm px-6 py-3 h-auto text-base font-medium transition-all duration-300">
                                             <Link href="#link" className="flex items-center gap-2">
-                                                <span>Rejoindre le réseau d'acheteurs</span>
+                                                <span>Rejoindre le réseau d&apos;acheteurs</span>
                                                 <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                                             </Link>
                                         </Button>
@@ -134,7 +130,7 @@ export default function HeroSection() {
                                         
                                         <div className="group cursor-default transition-all duration-300 hover:translate-x-1">
                                             <div className="text-white text-2xl font-light">0€</div>
-                                            <div className="text-white/90 font-medium text-sm mt-1">d'avance</div>
+                                            <div className="text-white/90 font-medium text-sm mt-1">d&apos;avance</div>
                                             <div className="text-white/60 text-xs mt-0.5">Success fee uniquement</div>
                                         </div>
                                     </div>

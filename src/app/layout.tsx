@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Dancing_Script, Great_Vibes, Satisfy } from "next/font/google";
+import { Geist, Geist_Mono, Italianno, Alex_Brush } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,20 +12,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const dancingScript = Dancing_Script({
-  variable: "--font-dancing-script",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
-
-const greatVibes = Great_Vibes({
-  variable: "--font-great-vibes",
+const italianno = Italianno({
+  variable: "--font-italianno",
   subsets: ["latin"],
   weight: "400",
 });
 
-const satisfy = Satisfy({
-  variable: "--font-satisfy",
+const alexBrush = Alex_Brush({
+  variable: "--font-alex-brush",
   subsets: ["latin"],
   weight: "400",
 });
@@ -43,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${dancingScript.variable} ${greatVibes.variable} ${satisfy.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${italianno.variable} ${alexBrush.variable} antialiased`}
       >
         {children}
       </body>

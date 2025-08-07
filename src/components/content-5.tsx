@@ -38,7 +38,7 @@ export default function ContentSection() {
 
                             <h3 className="text-sm font-medium">Accompagnement</h3>
                         </div>
-                        <p className="text-muted-foreground text-sm">Support complet de la lettre d'intention jusqu'à l'intégration post-acquisition.</p>
+                        <p className="text-muted-foreground text-sm">Support complet de la lettre d&apos;intention jusqu&apos;à l&apos;intégration post-acquisition.</p>
                     </div>
                 </div>
             </div>
