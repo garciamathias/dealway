@@ -1,5 +1,6 @@
 import HeroSection from "@/components/hero-section"
 import Stats from "@/components/Stats"
+import FeeComparison from "@/components/FeeComparison"
 import Footer from "@/components/Footer"
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <div className="relative z-10 bg-white min-h-screen shadow-2xl rounded-b-[12px]">
         <HeroSection />
         <Stats />
+        <FeeComparison />
       </div>
 
       {/* Footer collant (révélé en bas, sans espace blanc supplémentaire) */}
