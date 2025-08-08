@@ -1,7 +1,7 @@
 'use client'
 
 import Link from "next/link"
-import { Mail, Phone, MapPin, Linkedin, Twitter } from "lucide-react"
+import { Linkedin, Twitter, ArrowUpRight } from "lucide-react"
 import { useRef, useEffect } from 'react'
 
 export default function Footer() {
@@ -44,7 +44,7 @@ export default function Footer() {
   }, [])
 
   return (
-    <footer className="relative text-gray-100">
+    <footer className="sticky bottom-0 left-0 right-0 h-[340px] text-white z-0 -mt-10">
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <video
@@ -67,89 +67,67 @@ export default function Footer() {
           Your browser does not support the video tag.
         </video>
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-bold text-white mb-4">Dealway</h3>
-            <p className="mb-4 text-gray-200">
-              Expert en opérations M&A off-market, nous orchestrons des transactions 
-              confidentielles créatrices de valeur pour dirigeants et investisseurs.
-            </p>
-            <div className="flex space-x-4">
-              <a href="#" className="hover:text-white transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
+      <div className="relative z-10 h-full flex flex-col max-w-7xl mx-auto px-8 py-12">
+        {/* Centered block: left column with logo + nav; right column with social icons */}
+        <div className="flex-1 flex items-center">
+          <div className="grid grid-cols-[1fr_auto] items-center w-full">
+            <div className="space-y-4">
+              <div className="flex items-center">
+                <h2 className="text-3xl font-light">Dealway</h2>
+              </div>
+              <nav className="flex items-center gap-8">
+              <Link href="#services" className="text-sm hover:text-gray-300 transition-colors">
+                Services
+              </Link>
+              <Link href="#process" className="text-sm hover:text-gray-300 transition-colors">
+                Process
+              </Link>
+              <Link href="#about" className="text-sm hover:text-gray-300 transition-colors">
+                Team
+              </Link>
+              <Link href="#contact" className="text-sm hover:text-gray-300 transition-colors">
+                Contact us
+              </Link>
+            </nav>
+            </div>
+
+            {/* Social links */}
+            <div className="flex items-center justify-end gap-6">
+              <a
+                href="#"
+                className="hover:text-gray-300 transition-colors"
+                aria-label="Twitter"
+              >
                 <Twitter className="h-5 w-5" />
               </a>
+              <a
+                href="#"
+                className="hover:text-gray-300 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
             </div>
-          </div>
-
-          <div>
-            <h4 className="text-white font-semibold mb-4">Liens Rapides</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="#services" className="hover:text-white transition-colors">
-                  Nos Services
-                </Link>
-              </li>
-              <li>
-                <Link href="#process" className="hover:text-white transition-colors">
-                  Notre Processus
-                </Link>
-              </li>
-              <li>
-                <Link href="#about" className="hover:text-white transition-colors">
-                  À Propos
-                </Link>
-              </li>
-              <li>
-                <Link href="#contact" className="hover:text-white transition-colors">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white font-semibold mb-4">Nous Contacter</h4>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <Mail className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
-                <span>info@dealway.io</span>
-              </li>
-              <li className="flex items-start">
-                <Phone className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
-                <span>1-800-DEALWAY</span>
-              </li>
-              <li className="flex items-start">
-                <MapPin className="h-5 w-5 mr-2 mt-0.5 flex-shrink-0" />
-                <span>Paris, France</span>
-              </li>
-            </ul>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/20">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-gray-200">
-              © 2024 Dealway. Tous droits réservés.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="#" className="text-sm hover:text-white transition-colors">
-                Politique de Confidentialité
-              </Link>
-              <Link href="#" className="text-sm hover:text-white transition-colors">
-                Conditions d&apos;Utilisation
-              </Link>
-              <Link href="#" className="text-sm hover:text-white transition-colors">
-                Politique de Cookies
-              </Link>
-            </div>
+        {/* Divider line */}
+        <div className="mt-12 h-px w-full bg-white/30" />
+
+        {/* Bottom section */}
+        <div className="flex items-center justify-between text-xs text-gray-300 pt-3">
+          <p>Copyright © 2025 Dealway. All rights reserved.</p>
+          <div className="flex items-center gap-6">
+            <Link href="#" className="hover:text-white transition-colors">
+              Privacy
+            </Link>
+            <Link href="#" className="hover:text-white transition-colors">
+              Terms
+            </Link>
           </div>
         </div>
       </div>
