@@ -77,7 +77,7 @@ export default function HeroSection() {
                     </div>
                     
                     {/* Content */}
-                    <div className="relative z-10 min-h-screen flex items-start py-12 lg:pt-48 lg:pb-20">
+                    <div className="relative z-10 min-h-screen flex items-start py-12 lg:pt-38 lg:pb-20">
                         <div className="mx-auto max-w-7xl px-6 lg:px-8">
                             <div className="grid grid-cols-1 gap-x-20 gap-y-8 lg:grid-cols-12 lg:items-start">
                                 {/* Left Column - Main Content (75%) */}
@@ -111,27 +111,27 @@ export default function HeroSection() {
                                 <div className="lg:col-span-3 relative">
                                     <div className="mt-8 lg:mt-16 pl-8 space-y-6">
                                         <div className="group cursor-default transition-all duration-300 hover:translate-x-1">
-                                            <div className="text-white text-2xl font-light">1000+</div>
+                                            <div className="text-white text-2xl font-light">1 000+</div>
                                             <div className="text-white/90 font-medium text-sm mt-1">acheteurs qualifiés</div>
-                                            <div className="text-white/60 text-xs mt-0.5">Réseau IA optimisé</div>
+                                            <div className="text-white/60 text-xs mt-0.5">Mises en relation stratégiques grâce à notre IA</div>
                                         </div>
                                         
                                         <div className="group cursor-default transition-all duration-300 hover:translate-x-1">
-                                            <div className="text-white text-2xl font-light">+30%</div>
-                                            <div className="text-white/90 font-medium text-sm mt-1">de valeur ajoutée</div>
-                                            <div className="text-white/60 text-xs mt-0.5">Enchères compétitives</div>
+                                            <div className="text-white text-2xl font-light">+30 %</div>
+                                            <div className="text-white/90 font-medium text-sm mt-1">Offres plus élevées</div>
+                                            <div className="text-white/60 text-xs mt-0.5">Enchères compétitives qui maximisent la valeur</div>
                                         </div>
                                         
                                         <div className="group cursor-default transition-all duration-300 hover:translate-x-1">
-                                            <div className="text-white text-2xl font-light">45 jours</div>
-                                            <div className="text-white/90 font-medium text-sm mt-1">pour les premières offres</div>
-                                            <div className="text-white/60 text-xs mt-0.5">Process accéléré</div>
+                                            <div className="text-white text-2xl font-light">&lt; 45 jours</div>
+                                            <div className="text-white/90 font-medium text-sm mt-1">Offres en &lt; 45 jours</div>
+                                            <div className="text-white/60 text-xs mt-0.5">45 jours vs 4 mois pour les premières offres</div>
                                         </div>
                                         
                                         <div className="group cursor-default transition-all duration-300 hover:translate-x-1">
-                                            <div className="text-white text-2xl font-light">0€</div>
-                                            <div className="text-white/90 font-medium text-sm mt-1">d&apos;avance</div>
-                                            <div className="text-white/60 text-xs mt-0.5">Success fee uniquement</div>
+                                            <div className="text-white text-2xl font-light">0 €</div>
+                                            <div className="text-white/90 font-medium text-sm mt-1">à avancer</div>
+                                            <div className="text-white/60 text-xs mt-0.5">Success fee uniquement, aucun frais caché</div>
                                         </div>
                                     </div>
                                 </div>
