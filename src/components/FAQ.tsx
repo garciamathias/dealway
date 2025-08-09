@@ -1,12 +1,9 @@
 'use client'
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { DynamicIcon, type IconName } from 'lucide-react/dynamic'
-import Link from 'next/link'
 
 type FAQItem = {
     id: string
-    icon: IconName
     question: string
     answer: string
 }
@@ -15,95 +12,92 @@ export default function FAQ() {
     const faqItems: FAQItem[] = [
         {
             id: 'item-1',
-            icon: 'building-2',
-            question: 'What is DealWay?',
-            answer: 'DealWay is a tech-enabled investment bank built for small business owners. Our experienced M&A advisors run a full sell-side process - leveraging our proprietary AI tools and a curated buyer database to identify every serious acquirer for your business.',
+            question: 'Qu\'est-ce que DealWay ?',
+            answer: 'DealWay est une banque d\'investissement tech-enabled conçue pour les dirigeants de PME. Nos conseillers M&A expérimentés orchestrent un processus de vente complet, en s\'appuyant sur nos outils IA propriétaires et une base de données d\'acheteurs qualifiés pour identifier chaque acquéreur sérieux pour votre entreprise.',
         },
         {
             id: 'item-2',
-            icon: 'search',
-            question: 'How does DealWay find buyers?',
-            answer: 'We combine hands-on deal experience with custom algorithms that analyze buyer behavior, past investments, and operating fit. On average, our AI identifies 1,000+ relevant buyers from our extensive database - significantly more than traditional M&A firms. We search for potential buyers globally and conduct thorough matching to ensure the best fit for your business.',
+            question: 'Comment DealWay trouve-t-il des acheteurs ?',
+            answer: 'Nous combinons une expérience pratique des deals avec des algorithmes personnalisés qui analysent le comportement des acheteurs, les investissements passés et l\'adéquation opérationnelle. En moyenne, notre IA identifie plus de 1000 acheteurs pertinents dans notre base de données - significativement plus que les cabinets M&A traditionnels.',
         },
         {
             id: 'item-3',
-            icon: 'briefcase',
-            question: 'What kinds of businesses does DealWay work with?',
-            answer: 'We work with profitable, owner-led businesses across most industries, typically with $5–100 million in annual revenue and at least 5 years of operating history. Our expertise spans various sectors including technology, manufacturing, services, and retail.',
+            question: 'Avec quels types d\'entreprises travaillez-vous ?',
+            answer: 'Nous travaillons avec des entreprises rentables dirigées par leurs propriétaires dans la plupart des secteurs, généralement avec un chiffre d\'affaires annuel de 5 à 100 millions d\'euros et au moins 5 ans d\'historique d\'exploitation.',
         },
         {
             id: 'item-4',
-            icon: 'dollar-sign',
-            question: 'How do DealWay\'s fees work?',
-            answer: 'Unlike most advisors, we operate entirely on a success-fee model. There are no retainers, no upfront costs - we only get paid when your business sells. We put our customers first with this completely success-based fee system, ensuring our interests are fully aligned with yours.',
+            question: 'Comment fonctionnent vos honoraires ?',
+            answer: 'Contrairement à la plupart des conseillers, nous opérons entièrement sur un modèle de success fee. Il n\'y a pas de retainer, pas de frais initiaux - nous ne sommes payés que lorsque votre entreprise est vendue. Nous mettons nos clients en premier avec ce système de frais entièrement basé sur le succès.',
         },
         {
             id: 'item-5',
-            icon: 'clock',
-            question: 'How fast is the process?',
-            answer: 'Our clients receive qualified offers in under 45 days, driven by our streamlined process and buyer-matching AI technology. The quickest completion can be as fast as 1.5 months from your initial request. Our experienced M&A Advisers eliminate unnecessary exchanges between matching and closing, significantly shortening the time required for successful M&A transactions.',
+            question: 'Quelle est la durée du processus ?',
+            answer: 'Nos clients reçoivent des offres qualifiées en moins de 45 jours, grâce à notre processus rationalisé et notre technologie IA de matching d\'acheteurs. La réalisation la plus rapide peut être aussi courte que 1,5 mois à partir de votre demande initiale.',
         },
         {
             id: 'item-6',
-            icon: 'map-pin',
-            question: 'Can you help companies in rural areas?',
-            answer: 'Of course! We will visit you anywhere in the country free of charge. Many of the companies we have successfully worked with as M&A intermediaries are local companies in rural areas. Geographic location is no barrier to achieving a successful business sale with DealWay.',
+            question: 'Pouvez-vous aider les entreprises en zones rurales ?',
+            answer: 'Bien sûr ! Nous nous déplaçons partout en France sans frais supplémentaires. De nombreuses entreprises avec lesquelles nous avons travaillé avec succès sont des entreprises locales en zones rurales. La localisation géographique n\'est pas un obstacle pour réussir la vente de votre entreprise avec DealWay.',
         },
         {
             id: 'item-7',
-            icon: 'award',
-            question: 'What are the advantages of DealWay?',
-            answer: 'Our key advantages include: (1) Completely success-based fee system - free until your business sells, (2) Extensive track record of successful M&A transactions, (3) Full support from experienced M&A Advisers who conduct negotiations in a polite and sincere manner, (4) Proprietary AI technology that identifies significantly more potential buyers than traditional firms, and (5) Commitment to results from the customer\'s point of view with a fast, streamlined process.',
+            question: 'Quels sont les avantages de DealWay ?',
+            answer: 'Nos principaux avantages incluent : un système de frais entièrement basé sur le succès, un historique étendu de transactions M&A réussies, un support complet de conseillers M&A expérimentés, une technologie IA propriétaire qui identifie significativement plus d\'acheteurs potentiels que les cabinets traditionnels, et un engagement envers les résultats avec un processus rapide et rationalisé.',
         },
     ]
 
     return (
-        <section className="bg-muted dark:bg-background py-20">
-            <div className="mx-auto max-w-5xl px-4 md:px-6">
-                <div className="flex flex-col gap-10 md:flex-row md:gap-16">
-                    <div className="md:w-1/3">
-                        <div className="sticky top-20">
-                            <h2 className="mt-4 text-3xl font-bold">FAQ\'s</h2>
-                            <p className="text-muted-foreground mt-4">
-                                Answers to frequently asked questions.{' '}
-                                <Link
-                                    href="#"
-                                    className="text-primary font-medium hover:underline block mt-4">
-                                    Talk to us
-                                </Link>
-                            </p>
-                        </div>
-                    </div>
-                    <div className="md:w-2/3">
-                        <Accordion
-                            type="single"
-                            collapsible
-                            className="w-full space-y-2">
-                            {faqItems.map((item) => (
-                                <AccordionItem
-                                    key={item.id}
-                                    value={item.id}
-                                    className="bg-background shadow-xs rounded-lg border px-4 last:border-b">
-                                    <AccordionTrigger className="cursor-pointer items-center py-5 hover:no-underline">
-                                        <div className="flex items-center gap-3">
-                                            <div className="flex size-6">
-                                                <DynamicIcon
-                                                    name={item.icon}
-                                                    className="m-auto size-4"
-                                                />
-                                            </div>
-                                            <span className="text-base">{item.question}</span>
-                                        </div>
-                                    </AccordionTrigger>
-                                    <AccordionContent className="pb-5">
-                                        <div className="px-9">
-                                            <p className="text-base">{item.answer}</p>
-                                        </div>
-                                    </AccordionContent>
-                                </AccordionItem>
-                            ))}
-                        </Accordion>
-                    </div>
+        <section className="py-24 bg-white">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                {/* Header */}
+                <div className="mx-auto max-w-3xl text-center mb-16">
+                    <h2 className="text-4xl font-light lg:text-5xl mb-6 text-gray-900">
+                        Questions fréquentes
+                    </h2>
+                    <p className="text-xl text-gray-600 font-light">
+                        Tout ce que vous devez savoir sur notre approche unique du M&A
+                    </p>
+                </div>
+
+                {/* FAQ Accordion */}
+                <div className="mx-auto max-w-3xl">
+                    <Accordion
+                        type="single"
+                        collapsible
+                        className="space-y-4">
+                        {faqItems.map((item) => (
+                            <AccordionItem
+                                key={item.id}
+                                value={item.id}
+                                className="border-b border-gray-200 pb-4"
+                            >
+                                <AccordionTrigger className="text-left hover:no-underline py-4">
+                                    <span className="text-lg font-medium text-gray-900">
+                                        {item.question}
+                                    </span>
+                                </AccordionTrigger>
+                                <AccordionContent className="pt-2 pb-4">
+                                    <p className="text-gray-600 leading-relaxed">
+                                        {item.answer}
+                                    </p>
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                </div>
+
+                {/* CTA */}
+                <div className="mt-16 text-center">
+                    <p className="text-gray-600 mb-4">
+                        Vous avez d\'autres questions ?
+                    </p>
+                    <a 
+                        href="#contact" 
+                        className="text-lg font-medium text-gray-900 hover:text-gray-700 underline underline-offset-4"
+                    >
+                        Contactez-nous
+                    </a>
                 </div>
             </div>
         </section>
