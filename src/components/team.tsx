@@ -24,7 +24,7 @@ export default function TeamSection() {
                         Notre équipe
                     </h1>
                     <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-                        Découvrez l'équipe passionnée qui se consacre à transformer votre vision d'entreprise en réalité grâce à notre expertise et notre engagement.
+                        Découvrez l&apos;équipe passionnée qui se consacre à transformer votre vision d&apos;entreprise en réalité grâce à notre expertise et notre engagement.
                     </p>
                 </div>
                 <div>

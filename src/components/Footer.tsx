@@ -1,7 +1,7 @@
 'use client'
 
 import Link from "next/link"
-import { Linkedin, Twitter, ArrowUpRight } from "lucide-react"
+import { Linkedin, Twitter } from "lucide-react"
 import { useRef, useEffect } from 'react'
 
 export default function Footer() {

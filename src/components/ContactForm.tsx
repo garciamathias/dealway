@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Mail, Phone, MapPin, Send } from 'lucide-react'
+import { Send } from 'lucide-react'
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)

@@ -9,9 +9,9 @@ import Link from 'next/link'
 import { Calendar, Clock, ArrowLeft, Share2 } from 'lucide-react'
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export async function generateStaticParams() {
@@ -21,8 +21,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = getBlogPost(params.slug)
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { slug } = await params
+  const post = getBlogPost(slug)
   
   if (!post) {
     notFound()
@@ -142,7 +143,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 <h3 className="font-semibold text-gray-900 mb-1">{post.author.name}</h3>
                 <p className="text-slate-600 text-sm mb-3">{post.author.role}</p>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Expert en transformation digitale avec plus de 10 ans d'expérience dans l'accompagnement d'entreprises vers l'innovation et l'excellence opérationnelle.
+                  Expert en transformation digitale avec plus de 10 ans d&apos;expérience dans l&apos;accompagnement d&apos;entreprises vers l&apos;innovation et l&apos;excellence opérationnelle.
                 </p>
               </div>
             </div>

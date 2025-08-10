@@ -6,14 +6,14 @@ import SimpleFooter from '@/components/SimpleFooter'
 import BlogCard from '@/components/BlogCard'
 import BlogFilters from '@/components/BlogFilters'
 import BlogPagination from '@/components/BlogPagination'
-import { getAllBlogPosts, getCategories, filterAndSearchBlogPosts, paginatePosts } from '@/lib/blog-data'
+import { getCategories, filterAndSearchBlogPosts, paginatePosts } from '@/lib/blog-data'
 
 export default function BlogPage() {
   const [activeFilter, setActiveFilter] = useState<string | null>(null)
   const [searchTerm, setSearchTerm] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
   
-  const allPosts = getAllBlogPosts()
+  // const allPosts = getAllBlogPosts()
   const categories = getCategories()
   const postsPerPage = 3 // Afficher 3 articles par page pour avoir de la pagination
 
@@ -52,7 +52,7 @@ export default function BlogPage() {
                   Notre Blog
                 </h1>
                 <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-                  Découvrez nos dernières réflexions sur la transformation digitale, l'innovation et les meilleures pratiques business.
+                  Découvrez nos dernières réflexions sur la transformation digitale, l&apos;innovation et les meilleures pratiques business.
                 </p>
               </div>
 
@@ -82,8 +82,6 @@ export default function BlogPage() {
                       <BlogPagination
                         currentPage={currentPage}
                         totalPages={paginationData.totalPages}
-                        totalPosts={paginationData.totalPosts}
-                        postsPerPage={postsPerPage}
                         onPageChange={handlePageChange}
                       />
                     </div>

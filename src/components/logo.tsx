@@ -1,6 +1,6 @@
 import { cn } from '../lib/utils'
 
-export const Logo = ({ className, uniColor }: { className?: string; uniColor?: boolean }) => {
+export const Logo = ({ className }: { className?: string; uniColor?: boolean }) => {
     return (
         <div className={cn('text-3xl font-medium', className)} style={{ fontFamily: 'var(--font-poppins)' }}>
             Dealway

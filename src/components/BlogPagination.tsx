@@ -6,20 +6,18 @@ import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from 'lucide-r
 interface BlogPaginationProps {
   currentPage: number
   totalPages: number
-  totalPosts: number
-  postsPerPage: number
+  // totalPosts: number
+  // postsPerPage: number
   onPageChange: (page: number) => void
 }
 
 export default function BlogPagination({
   currentPage,
   totalPages,
-  totalPosts,
-  postsPerPage,
   onPageChange
 }: BlogPaginationProps) {
-  const startPost = (currentPage - 1) * postsPerPage + 1
-  const endPost = Math.min(currentPage * postsPerPage, totalPosts)
+  // const startPost = (currentPage - 1) * postsPerPage + 1
+  // const endPost = Math.min(currentPage * postsPerPage, totalPosts)
 
   return (
     <div className="flex flex-col items-center gap-6">
