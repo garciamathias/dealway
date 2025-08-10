@@ -2,12 +2,12 @@ import { Check, Minus } from 'lucide-react'
 
 export default function FeeComparison() {
     return (
-        <section className="py-24 bg-white">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <section className="py-16 bg-white">
+            <div className="mx-auto max-w-6xl px-6">
                 {/* Header */}
                 <div className="mx-auto max-w-3xl text-center mb-20">
                     <h2 className="text-4xl font-light lg:text-5xl mb-6 text-gray-900">
-                        Nous sommes gratuits jusqu'au closing
+                        Nous sommes gratuits jusqu&apos;au closing
                     </h2>
                     <p className="text-xl text-gray-600 font-light">
                         Un accompagnement complet de A à Z, aligné à 100% avec vos intérêts.
@@ -20,7 +20,7 @@ export default function FeeComparison() {
                     {/* Dealway Card */}
                     <div className="relative">
                         <div className="absolute -top-3 left-8 bg-black text-white px-4 py-1 text-sm font-medium rounded-sm">
-                            DEALWAY
+                            Dealway
                         </div>
                         <div className="border-2 border-black rounded-lg p-8 h-full bg-white">
                             <h3 className="text-2xl font-light mb-8 text-gray-900">
@@ -32,7 +32,7 @@ export default function FeeComparison() {
                                     <Check className="h-5 w-5 mt-0.5 flex-shrink-0" />
                                     <div>
                                         <p className="font-medium text-gray-900">Aucun frais de retainer</p>
-                                        <p className="text-sm text-gray-600 mt-1">0€ à l'engagement</p>
+                                        <p className="text-sm text-gray-600 mt-1">0€ à l&apos;engagement</p>
                                     </div>
                                 </div>
                                 
@@ -161,7 +161,7 @@ export default function FeeComparison() {
                 {/* Bottom Message */}
                 <div className="mt-16 text-center">
                     <p className="text-3xl font-light text-gray-900">
-                        Avec Dealway, vous ne payez <span className="font-medium">qu'en cas de succès</span>
+                        Avec Dealway, vous ne payez <span className="font-medium">qu&apos;en cas de succès</span>
                     </p>
                     <p className="mt-4 text-lg text-gray-600">
                         Nous investissons notre temps et nos ressources pour maximiser votre valorisation

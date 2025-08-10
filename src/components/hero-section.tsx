@@ -4,7 +4,6 @@ import React, { useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { HeroHeader } from './Header'
-import { InfiniteSlider } from '@/components/ui/infinite-slider'
 import { ArrowUpRight } from 'lucide-react'
 
 export default function HeroSection() {
@@ -77,150 +76,62 @@ export default function HeroSection() {
                     </div>
                     
                     {/* Content */}
-                    <div className="relative z-10 min-h-screen flex items-start py-12 lg:pt-38 lg:pb-20">
-                        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                            <div className="grid grid-cols-1 gap-x-20 gap-y-8 lg:grid-cols-12 lg:items-start">
-                                {/* Left Column - Main Content (75%) */}
-                                <div className="lg:col-span-9 text-center lg:text-left">
-                                    <h1 className="mt-8 text-balance text-5xl font-light text-white md:text-6xl lg:mt-16 xl:text-7xl">La Banque d&apos;Affaires Nouvelle Génération pour les PME</h1>
-                                    <p className="mt-8 text-pretty text-lg text-gray-100 max-w-2xl">Nous vous trouvons le bon acquéreur sans sacrifier votre valorisation ni perdre des mois en négociations</p>
+                    <div className="relative z-10 min-h-screen flex items-start py-8 sm:py-12 lg:pt-38 lg:pb-20">
+                        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-12">
+                            <div className="text-center lg:text-left">
+                                <h1 className="mt-6 sm:mt-8 text-balance text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white lg:mt-16 xl:text-7xl font-garamond">La Banque d&apos;Affaires Nouvelle Génération pour les PME</h1>
+                                <p className="mt-6 sm:mt-8 text-pretty text-base sm:text-lg text-gray-100 max-w-2xl mx-auto lg:mx-0">Nous vous accompagnons pour céder votre entreprise au meilleur prix et dans les meilleures conditions.</p>
 
-                                    <div className="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row lg:justify-start">
-                                        <Button
-                                            asChild
-                                            variant="default"
-                                            className="group bg-white text-black hover:bg-gray-50 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-white/10 rounded-sm px-6 py-3 h-auto text-base font-medium transition-all duration-300">
-                                            <Link href="#link" className="flex items-center gap-2">
-                                                <span>Vendre mon entreprise</span>
-                                                <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                                            </Link>
-                                        </Button>
-                                        <Button
-                                            asChild
-                                            variant="outline"
-                                            className="group border border-white/70 bg-transparent text-white hover:text-white hover:border-white hover:bg-white/5 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-white/10 rounded-sm px-6 py-3 h-auto text-base font-medium transition-all duration-300">
-                                            <Link href="#link" className="flex items-center gap-2">
-                                                <span>Rejoindre le réseau d&apos;acheteurs</span>
-                                                <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                                            </Link>
-                                        </Button>
-                                    </div>
+                                <div className="mt-8 sm:mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row lg:justify-start">
+                                    <Button
+                                        asChild
+                                        variant="default"
+                                        className="group bg-white text-black hover:bg-gray-50 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-white/10 rounded-sm px-4 sm:px-6 py-2.5 sm:py-3 h-auto text-sm sm:text-base font-medium transition-all duration-300 w-full sm:w-auto">
+                                        <Link href="#link" className="flex items-center justify-center gap-2">
+                                            <span>Vendre mon entreprise</span>
+                                            <ArrowUpRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                                        </Link>
+                                    </Button>
+                                    <Button
+                                        asChild
+                                        variant="outline"
+                                        className="group border border-white/70 bg-transparent text-white hover:text-white hover:border-white hover:bg-white/5 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-white/10 rounded-sm px-4 sm:px-6 py-2.5 sm:py-3 h-auto text-sm sm:text-base font-medium transition-all duration-300 w-full sm:w-auto">
+                                        <Link href="#link" className="flex items-center justify-center gap-2">
+                                            <span className="text-center">Rejoindre le réseau d&apos;acheteurs</span>
+                                            <ArrowUpRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                                        </Link>
+                                    </Button>
                                 </div>
 
-                                {/* Right Column - Stats (25%) */}
-                                <div className="lg:col-span-3 relative">
-                                    <div className="mt-8 lg:mt-16 pl-8 space-y-6">
-                                        <div className="group cursor-default transition-all duration-300 hover:translate-x-1">
-                                            <div className="text-white text-2xl font-light">1 000+</div>
-                                            <div className="text-white/90 font-medium text-sm mt-1">acheteurs qualifiés</div>
-                                            <div className="text-white/60 text-xs mt-0.5">Mises en relation stratégiques grâce à notre IA</div>
+                                {/* Stats Grid - Horizontal below CTAs */}
+                                <div className="mt-12 sm:mt-16">
+                                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+                                        <div className="group cursor-default transition-all duration-300 hover:-translate-y-0.5 text-center lg:text-left">
+                                            <div className="text-white text-lg sm:text-xl lg:text-2xl font-light">1 000+</div>
+                                            <div className="text-white/90 font-medium text-xs sm:text-sm mt-1">acheteurs qualifiés</div>
+                                            <div className="text-white/60 text-xs mt-0.5 hidden sm:block">Mises en relation stratégiques grâce à notre IA</div>
                                         </div>
                                         
-                                        <div className="group cursor-default transition-all duration-300 hover:translate-x-1">
-                                            <div className="text-white text-2xl font-light">+30 %</div>
-                                            <div className="text-white/90 font-medium text-sm mt-1">Offres plus élevées</div>
-                                            <div className="text-white/60 text-xs mt-0.5">Enchères compétitives qui maximisent la valeur</div>
+                                        <div className="group cursor-default transition-all duration-300 hover:-translate-y-0.5 text-center lg:text-left">
+                                            <div className="text-white text-lg sm:text-xl lg:text-2xl font-light">+30 %</div>
+                                            <div className="text-white/90 font-medium text-xs sm:text-sm mt-1">Offres plus élevées</div>
+                                            <div className="text-white/60 text-xs mt-0.5 hidden sm:block">Enchères compétitives qui maximisent la valeur</div>
                                         </div>
                                         
-                                        <div className="group cursor-default transition-all duration-300 hover:translate-x-1">
-                                            <div className="text-white text-2xl font-light">&lt; 45 jours</div>
-                                            <div className="text-white/90 font-medium text-sm mt-1">Offres en &lt; 45 jours</div>
-                                            <div className="text-white/60 text-xs mt-0.5">45 jours vs 4 mois pour les premières offres</div>
+                                        <div className="group cursor-default transition-all duration-300 hover:-translate-y-0.5 text-center lg:text-left">
+                                            <div className="text-white text-lg sm:text-xl lg:text-2xl font-light">&lt; 45 jours</div>
+                                            <div className="text-white/90 font-medium text-xs sm:text-sm mt-1">Offres en &lt; 45 jours</div>
+                                            <div className="text-white/60 text-xs mt-0.5 hidden sm:block">45 jours vs 4 mois pour les premières offres</div>
                                         </div>
                                         
-                                        <div className="group cursor-default transition-all duration-300 hover:translate-x-1">
-                                            <div className="text-white text-2xl font-light">0 €</div>
-                                            <div className="text-white/90 font-medium text-sm mt-1">à avancer</div>
-                                            <div className="text-white/60 text-xs mt-0.5">Success fee uniquement, aucun frais caché</div>
+                                        <div className="group cursor-default transition-all duration-300 hover:-translate-y-0.5 text-center lg:text-left">
+                                            <div className="text-white text-lg sm:text-xl lg:text-2xl font-light">0 €</div>
+                                            <div className="text-white/90 font-medium text-xs sm:text-sm mt-1">à avancer</div>
+                                            <div className="text-white/60 text-xs mt-0.5 hidden sm:block">Success fee uniquement, aucun frais caché</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    
-                    {/* Logo Section - Positioned at bottom of video */}
-                    <div className="absolute bottom-8 left-0 right-0 z-20">
-                        <div className="relative w-full py-8">
-                            <InfiniteSlider
-                                speedOnHover={20}
-                                speed={40}
-                                gap={112}>
-                                        <div className="flex">
-                                            <img
-                                                className="mx-auto h-5 w-fit brightness-0 invert"
-                                                src="https://html.tailus.io/blocks/customers/nvidia.svg"
-                                                alt="Nvidia Logo"
-                                                height="20"
-                                                width="auto"
-                                            />
-                                        </div>
-
-                                        <div className="flex">
-                                            <img
-                                                className="mx-auto h-4 w-fit brightness-0 invert"
-                                                src="https://html.tailus.io/blocks/customers/column.svg"
-                                                alt="Column Logo"
-                                                height="16"
-                                                width="auto"
-                                            />
-                                        </div>
-                                        <div className="flex">
-                                            <img
-                                                className="mx-auto h-4 w-fit brightness-0 invert"
-                                                src="https://html.tailus.io/blocks/customers/github.svg"
-                                                alt="GitHub Logo"
-                                                height="16"
-                                                width="auto"
-                                            />
-                                        </div>
-                                        <div className="flex">
-                                            <img
-                                                className="mx-auto h-5 w-fit brightness-0 invert"
-                                                src="https://html.tailus.io/blocks/customers/nike.svg"
-                                                alt="Nike Logo"
-                                                height="20"
-                                                width="auto"
-                                            />
-                                        </div>
-                                        <div className="flex">
-                                            <img
-                                                className="mx-auto h-5 w-fit brightness-0 invert"
-                                                src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
-                                                alt="Lemon Squeezy Logo"
-                                                height="20"
-                                                width="auto"
-                                            />
-                                        </div>
-                                        <div className="flex">
-                                            <img
-                                                className="mx-auto h-4 w-fit brightness-0 invert"
-                                                src="https://html.tailus.io/blocks/customers/laravel.svg"
-                                                alt="Laravel Logo"
-                                                height="16"
-                                                width="auto"
-                                            />
-                                        </div>
-                                        <div className="flex">
-                                            <img
-                                                className="mx-auto h-7 w-fit brightness-0 invert"
-                                                src="https://html.tailus.io/blocks/customers/lilly.svg"
-                                                alt="Lilly Logo"
-                                                height="28"
-                                                width="auto"
-                                            />
-                                        </div>
-
-                                        <div className="flex">
-                                            <img
-                                                className="mx-auto h-6 w-fit brightness-0 invert"
-                                                src="https://html.tailus.io/blocks/customers/openai.svg"
-                                                alt="OpenAI Logo"
-                                                height="24"
-                                                width="auto"
-                                            />
-                                        </div>
-                            </InfiniteSlider>
                         </div>
                     </div>
                 </section>

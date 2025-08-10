@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Italianno, Alex_Brush } from "next/font/google";
+import { Geist, Geist_Mono, Italianno, Alex_Brush, EB_Garamond, Poppins } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -24,6 +24,18 @@ const alexBrush = Alex_Brush({
   weight: "400",
 });
 
+const garamond = EB_Garamond({
+  variable: "--font-garamond",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+});
+
 export const metadata: Metadata = {
   title: "Dealway - Expert en opérations M&A off-market",
   description: "Dealway orchestre des transactions confidentielles créatrices de valeur pour dirigeants et investisseurs",
@@ -37,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${italianno.variable} ${alexBrush.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${italianno.variable} ${alexBrush.variable} ${garamond.variable} ${poppins.variable} antialiased`}
       >
         {children}
       </body>

@@ -2,7 +2,7 @@ import { cn } from '../lib/utils'
 
 export const Logo = ({ className, uniColor }: { className?: string; uniColor?: boolean }) => {
     return (
-        <div className={cn('text-white text-4xl', className)} style={{ fontFamily: 'var(--font-italianno)' }}>
+        <div className={cn('text-3xl font-medium', className)} style={{ fontFamily: 'var(--font-poppins)' }}>
             Dealway
         </div>
     )
