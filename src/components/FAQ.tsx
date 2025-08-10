@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 
 type FAQItem = {
@@ -48,56 +49,86 @@ export default function FAQ() {
     ]
 
     return (
-        <section className="py-24 bg-white">
+        <section className="relative py-24 bg-gradient-to-b from-white to-[#f7f4f1]">
+            {/* Fondu étendu vers la section suivante */}
+            <div
+                className="pointer-events-none absolute -bottom-16 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-[#f7f4f1]"
+                aria-hidden
+            />
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 {/* Header */}
-                <div className="mx-auto max-w-3xl text-center mb-16">
-                    <h2 className="text-4xl font-light lg:text-5xl mb-6 text-gray-900">
+                <div className="mx-auto max-w-3xl text-center mb-14">
+                    <h2 className="text-4xl font-light lg:text-5xl mb-4 text-gray-900">
                         Questions fréquentes
                     </h2>
-                    <p className="text-xl text-gray-600 font-light">
+                    <p className="text-lg text-gray-600 font-light">
                         Tout ce que vous devez savoir sur notre approche unique du M&A
                     </p>
                 </div>
 
-                {/* FAQ Accordion */}
-                <div className="mx-auto max-w-3xl">
-                    <Accordion
-                        type="single"
-                        collapsible
-                        className="space-y-4">
-                        {faqItems.map((item) => (
-                            <AccordionItem
-                                key={item.id}
-                                value={item.id}
-                                className="border-b border-gray-200 pb-4"
-                            >
-                                <AccordionTrigger className="text-left hover:no-underline py-4">
-                                    <span className="text-lg font-medium text-gray-900">
-                                        {item.question}
-                                    </span>
-                                </AccordionTrigger>
-                                <AccordionContent className="pt-2 pb-4">
-                                    <p className="text-gray-600 leading-relaxed">
-                                        {item.answer}
-                                    </p>
-                                </AccordionContent>
-                            </AccordionItem>
-                        ))}
-                    </Accordion>
+                {/* Image + FAQ grid */}
+                <div className="mx-auto max-w-6xl">
+                    <div className="grid items-start gap-10 lg:grid-cols-12">
+                        {/* Left: image */}
+                        <div className="lg:col-span-5">
+                            <div className="overflow-hidden rounded-xl border border-black/5 bg-white shadow-sm">
+                                <Image
+                                    src="/artefact-1754736401229.png"
+                                    alt="Conseiller M&A Dealway"
+                                    width={700}
+                                    height={900}
+                                    className="h-full w-full object-cover"
+                                    priority
+                                />
+                            </div>
+                        </div>
+
+                        {/* Right: FAQ Accordion */}
+                        <div className="lg:col-span-7">
+                            <Accordion
+                                type="single"
+                                collapsible
+                                className="space-y-4">
+                                {faqItems.map((item) => (
+                                    <AccordionItem
+                                        key={item.id}
+                                        value={item.id}
+                                        className="border-none rounded-xl bg-white/80 px-4 sm:px-6 ring-1 ring-black/5 transition-all hover:shadow-sm"
+                                    >
+                                        <AccordionTrigger className="text-left hover:no-underline py-4 text-[17px] font-medium text-gray-900 data-[state=open]:text-[#C49A7D]">
+                                            <span>
+                                                {item.question}
+                                            </span>
+                                        </AccordionTrigger>
+                                        <AccordionContent className="pt-0 pb-5">
+                                            <p className="text-gray-600 leading-relaxed">
+                                                {item.answer}
+                                            </p>
+                                        </AccordionContent>
+                                    </AccordionItem>
+                                ))}
+                            </Accordion>
+                        </div>
+                    </div>
                 </div>
 
                 {/* CTA */}
                 <div className="mt-16 text-center">
-                    <p className="text-gray-600 mb-4">
-                        Vous avez d\'autres questions ?
-                    </p>
-                    <a 
-                        href="#contact" 
-                        className="text-lg font-medium text-gray-900 hover:text-gray-700 underline underline-offset-4"
-                    >
-                        Contactez-nous
-                    </a>
+                    <p className="text-gray-600 mb-4">Vous avez d&apos;autres questions ?</p>
+                    <div className="flex items-center justify-center gap-3">
+                        <a
+                            href="#contact"
+                            className="group inline-flex items-center gap-2 rounded-sm bg-black px-6 py-3 text-base font-medium text-white transition-all hover:-translate-y-0.5 hover:bg-neutral-900 hover:shadow-lg hover:shadow-black/20"
+                        >
+                            Nous écrire
+                        </a>
+                        <a
+                            href="#buyers"
+                            className="group inline-flex items-center gap-2 rounded-sm border border-[#C49A7D]/50 bg-transparent px-6 py-3 text-base font-medium text-neutral-900 transition-all hover:-translate-y-0.5 hover:border-[#C49A7D] hover:bg-[#C49A7D]/10 hover:shadow-lg hover:shadow-black/5"
+                        >
+                            En savoir plus
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
