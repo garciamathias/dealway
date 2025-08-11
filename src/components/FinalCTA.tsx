@@ -24,7 +24,7 @@ export default function FinalCTA() {
                   variant="default"
                   className="group bg-black text-white hover:bg-neutral-900 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20 rounded-sm px-6 py-3 h-auto text-base font-medium transition-all duration-300"
                 >
-                  <Link href="#contact" className="flex items-center gap-2">
+                  <Link href="/contact" className="flex items-center gap-2">
                     <span>Nous contacter</span>
                     <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>

@@ -1,4 +1,5 @@
 import { TrendingUp, Shield, Target, Users } from 'lucide-react'
+import Image from 'next/image'
 
 export default function ContentSection() {
     return (
@@ -8,7 +9,7 @@ export default function ContentSection() {
                     <h2 className="text-balance text-4xl font-medium lg:text-5xl">Notre approche exclusive du M&A off-market crée de la valeur à chaque étape.</h2>
                     <p>Nous orchestrons des opérations de fusion-acquisition discrètes et ciblées, en connectant acquéreurs stratégiques et cibles qualifiées pour maximiser la création de valeur.</p>
                 </div>
-                <img className="rounded-(--radius) grayscale" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="M&A team" height="" width="" loading="lazy" />
+                <Image className="rounded-(--radius) grayscale" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="M&A team" height={600} width={1200} />
 
                 <div className="relative mx-auto grid grid-cols-2 gap-x-3 gap-y-6 sm:gap-8 lg:grid-cols-4">
                     <div className="space-y-3">

@@ -96,7 +96,7 @@ export default function Timeline() {
         {/* Header section */}
         <div className="text-center mb-12 md:mb-20">
           <h2 className="text-balance text-3xl sm:text-4xl font-light lg:text-5xl font-garamond text-slate-800">
-            Notre méthode
+            Notre approche
           </h2>
           <p className="mt-3 sm:mt-4 text-sm sm:text-base text-slate-700">
             Une approche structurée pour maximiser le prix de votre entreprise et réduire les délais de vente.

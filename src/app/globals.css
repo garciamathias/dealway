@@ -134,4 +134,18 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;  /* Chrome, Safari and Opera */
   }
+
+  /* Animation pour OrbitingCircles */
+  @keyframes orbit {
+    0% {
+      transform: rotate(calc(var(--angle, 0) * 1deg)) translateX(calc(var(--radius, 100) * 1px)) rotate(calc(var(--angle, 0) * -1deg));
+    }
+    100% {
+      transform: rotate(calc(var(--angle, 0) * 1deg + 360deg)) translateX(calc(var(--radius, 100) * 1px)) rotate(calc(var(--angle, 0) * -1deg - 360deg));
+    }
+  }
+
+  .animate-orbit {
+    animation: orbit calc(var(--duration, 20) * 1s) linear infinite;
+  }
 }

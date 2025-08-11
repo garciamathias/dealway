@@ -155,7 +155,7 @@ export default function FAQ() {
                                     size="sm"
                                     className="group border border-gray-300 bg-transparent text-gray-700 hover:text-black hover:border-gray-400 hover:bg-gray-50 hover:shadow-gray-200/50 rounded-sm px-4 py-2 h-auto text-sm font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
                                 >
-                                    <Link href="#contact" className="flex items-center gap-2">
+                                    <Link href="/contact" className="flex items-center gap-2">
                                         <span>Nous contacter</span>
                                         <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                                     </Link>
