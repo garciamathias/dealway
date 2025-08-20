@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react"
 
 export default function FinalCTA() {
   return (
-    <section className="relative bg-[#f7f4f1] py-16">
+    <section className="relative bg-[#f7f4f1] py-16 rounded-b-[12px] overflow-hidden">
       <div className="mx-auto max-w-[88rem] px-6 lg:px-8">
         {/* Conteneur clair (comme avant) */}
         <div className="relative overflow-hidden rounded-2xl border border-black/5 bg-gradient-to-br from-[#F3EEE9] via-[#EFEAE6] to-[#E8DFD9] p-6 sm:p-8 lg:p-10">
